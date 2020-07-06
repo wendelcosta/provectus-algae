@@ -7,6 +7,8 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import Title from '../../Title/Title'
 import Charts from '../../Charts/Charts'
 import PaperWrapper from '../../Paper/Paper'
+// @ts-ignore
+import Logo from './logo.png'
 
 interface Props {
   time: string
@@ -19,11 +21,17 @@ const useStyles = makeStyles(() => ({
   loading: {
     textAlign: 'center',
   },
+  img: {
+    margin: '0 auto',
+  },
+  showLogo: {
+    backgroundColor: '#000',
+  },
 }))
 
 const DashBoard: React.FC = () => {
   const classes = useStyles()
-  const [test, setTest] = useState<Props>({
+  const [currentPayload, setCurrentPayload] = useState<Props>({
     time: '',
     uv: null,
     pv: null,
@@ -56,38 +64,56 @@ const DashBoard: React.FC = () => {
                   onMouseMove={(payload): void =>
                     payload &&
                     payload.activePayload &&
-                    setTest(payload.activePayload[0].payload)
+                    setCurrentPayload(payload.activePayload[0].payload)
                   }
                   onMouseLeave={(): void =>
-                    setTest({ time: '', uv: null, pv: null, amt: null })
+                    setCurrentPayload({
+                      time: '',
+                      uv: null,
+                      pv: null,
+                      amt: null,
+                    })
                   }
                   data={data}
                 />
               </PaperWrapper>
             </Grid>
             <Grid item xs={6}>
-              <PaperWrapper>
-                <p>Time: {test.time}</p>
-                <p>UV: {test.uv}</p>
-                <p>PV: {test.pv}</p>
-                <p>AMT: {test.amt}</p>
-                <p>DIFF: {test.uv ? test.uv - test.pv : ''}</p>
-                <p
-                  style={
-                    test.uv
-                      ? test.uv - test.pv < 0
-                        ? { color: 'red' }
-                        : { color: 'green' }
-                      : { color: 'inherit' }
-                  }
-                >
-                  Desc:{' '}
-                  {test.uv
-                    ? test.uv - test.pv < 0
-                      ? 'Difference between UV and PV is negative, review your sensors'
-                      : 'Difference between UV and PV is positive'
-                    : ''}
-                </p>
+              <PaperWrapper
+                className={currentPayload.time === '' && classes.showLogo}
+              >
+                {currentPayload.time !== '' ? (
+                  <>
+                    <p>Time: {currentPayload.time}</p>
+                    <p>UV: {currentPayload.uv}</p>
+                    <p>PV: {currentPayload.pv}</p>
+                    <p>AMT: {currentPayload.amt}</p>
+                    <p>
+                      DIFF:{' '}
+                      {currentPayload.uv
+                        ? currentPayload.uv - currentPayload.pv
+                        : ''}
+                    </p>
+                    <p
+                      style={
+                        currentPayload.uv
+                          ? currentPayload.uv - currentPayload.pv < 0
+                            ? { color: 'red' }
+                            : { color: 'green' }
+                          : { color: 'inherit' }
+                      }
+                    >
+                      Desc:{' '}
+                      {currentPayload.uv
+                        ? currentPayload.uv - currentPayload.pv < 0
+                          ? 'Difference between UV and PV is negative, review your sensors'
+                          : 'Difference between UV and PV is positive'
+                        : ''}
+                    </p>
+                  </>
+                ) : (
+                  <img className={classes.img} src={Logo} alt="Logo" />
+                )}
               </PaperWrapper>
             </Grid>
           </Grid>
