@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "lib": ["dom", "es5", "es6", "es7", "es2019.array"],
+    "typeRoots": ["./node_modules/@types"],
+    "jsx": "react"
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

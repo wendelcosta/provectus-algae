@@ -1,0 +1,15 @@
+build/
+dist/
+node_modules/
+dist/index.html
+dist/src.*.js
+dist/*.png
+dist/src.*.css
+dist/src.*.map
+.cache
+.DS_Store
+.scratch/
+.vscode/
+.env.local
+.env.*.local
+**/.terraform/*

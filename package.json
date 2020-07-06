@@ -1,0 +1,58 @@
+{
+  "name": "provectus-algae",
+  "version": "1.0.0",
+  "description": "Provectus Algae POC",
+  "main": "index.tsx",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html"
+  },
+  "author": "wendel costa",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.52",
+    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/styles": "^4.9.13",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/recharts": "^1.8.10",
+    "axios": "^0.19.2",
+    "clsx": "^1.1.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.4.1",
+    "recharts": "^1.8.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.150",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/react-router": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-no-unsanitized": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
+    "typescript": "^3.8.3"
+  },
+  "browserslist": [
+    "last 5 Chrome versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 2 Firefox versions"
+  ]
+}

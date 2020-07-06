@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Provectus Algae</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <noscript>
+      For full functionality of this site it is necessary to enable JavaScript.
+      Here are the
+      <a href="https://www.enable-javascript.com/">
+        instructions how to enable JavaScript in your web browser</a
+      >.
+    </noscript>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="index.tsx" type="text/javascript"></script>
+    <script>
+      const userAgent = window.navigator.userAgent
+      if (
+        userAgent.indexOf('MSIE ') > 0 ||
+        userAgent.indexOf('Trident/') > 0 ||
+        userAgent.indexOf('Opera') > 0 ||
+        userAgent.indexOf('OPR') > 0
+      ) {
+        document.write(
+          '<div style="padding: 1rem; text-align: center; min-width: 20rem; max-width: 50rem; position: fixed; left: 23vw; top: 10vw; border: 1 solid #ff7679; font-family: Gill Sans, sans-serif;">',
+          '<strong style="font-weight: bold; color: orangered;">Unsupported Browser</strong>' +
+            '<p data-pm-slice="1 1 []" style="margin-top: 2rem;">Unfortunately, your browser is not supported for Provectus Algae.</p>',
+          '<p>For the best experience, we recommend using Chrome. Other supported browsers include Firefox and Edge.</p>',
+          '</div>'
+        )
+      }
+    </script>
+  </body>
+</html>
