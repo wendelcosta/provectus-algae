@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Brush,
+  Legend,
   ResponsiveContainer,
 } from 'recharts'
 
@@ -49,6 +50,7 @@ const LineChartWrapper: React.FC<Props> = ({
         <XAxis dataKey={x} />
         <YAxis />
         <Tooltip cursor={{ stroke: '#f3f3f3', strokeWidth: 20 }} />
+        <Legend verticalAlign="top" height={26} />
         <Line type="monotone" dataKey={y} stroke={color} fill={color} />
         {haveBrush && <Brush dataKey={x} />}
       </LineChart>
