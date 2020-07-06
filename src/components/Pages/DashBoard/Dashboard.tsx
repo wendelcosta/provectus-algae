@@ -57,7 +57,7 @@ const DashBoard: React.FC = () => {
         <>
           <Title>Dashboard</Title>
           <Grid container spacing={3}>
-            <Grid item xs={6}>
+            <Grid item xs={8}>
               <PaperWrapper>
                 <Charts
                   // @ts-ignore
@@ -78,7 +78,7 @@ const DashBoard: React.FC = () => {
                 />
               </PaperWrapper>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
               <PaperWrapper
                 className={currentPayload.time === '' && classes.showLogo}
               >

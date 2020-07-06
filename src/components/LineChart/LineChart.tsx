@@ -32,7 +32,7 @@ const LineChartWrapper: React.FC<Props> = ({
   color,
 }) => {
   return (
-    <ResponsiveContainer width={650} height={200}>
+    <ResponsiveContainer width="100%" height={200}>
       <LineChart
         data={data}
         syncId="graphs"
