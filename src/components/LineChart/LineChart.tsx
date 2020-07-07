@@ -49,7 +49,7 @@ const LineChartWrapper: React.FC<Props> = ({
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey={x} />
         <YAxis />
-        <Tooltip cursor={{ stroke: '#f3f3f3', strokeWidth: 20 }} />
+        <Tooltip cursor={{ stroke: '#f3f3f3', strokeWidth: 25 }} />
         <Legend verticalAlign="top" height={26} />
         <Line type="monotone" dataKey={y} stroke={color} fill={color} />
         {haveBrush && <Brush dataKey={x} />}

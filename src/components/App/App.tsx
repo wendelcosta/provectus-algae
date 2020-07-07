@@ -7,9 +7,7 @@ import Container from '@material-ui/core/Container'
 
 import Body from '../Body/Body'
 import Dashboard from '../Pages/DashBoard/Dashboard'
-
 import About from '../Pages/About/About'
-
 import ScrollToTop from '../../utils/ScrollToTop'
 
 const useStyles = makeStyles((theme) => ({

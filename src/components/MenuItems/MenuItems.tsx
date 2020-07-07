@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const MainListItems: React.FC = () => {
+const MenuItems: React.FC = () => {
   const classes = useStyles()
 
   return (
@@ -61,4 +61,4 @@ const MainListItems: React.FC = () => {
   )
 }
 
-export default MainListItems
+export default MenuItems

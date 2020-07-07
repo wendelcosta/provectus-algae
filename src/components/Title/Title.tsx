@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
@@ -24,9 +23,5 @@ const Title: React.FC = ({ children }) => {
       {children}
     </Typography>
   )
-}
-
-Title.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 export default Title

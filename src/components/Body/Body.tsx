@@ -11,11 +11,11 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import MenuIcon from '@material-ui/icons/Menu'
 import Typography from '@material-ui/core/Typography'
 
-import MainListItems from '../ListItems/ListItems'
+import MenuItems from '../MenuItems/MenuItems'
 
 const drawerWidth = 240
 
-const igOrange = '#23E97A'
+const paGreen = '#23E97A'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -94,8 +94,8 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
-  igOrange: {
-    backgroundColor: igOrange,
+  paGreen: {
+    backgroundColor: paGreen,
   },
   linkDashboard: {
     textDecoration: 'none',
@@ -119,7 +119,7 @@ const Body: React.FC = () => {
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
       >
-        <Toolbar className={clsx(classes.toolbar, classes.igOrange)}>
+        <Toolbar className={clsx(classes.toolbar, classes.paGreen)}>
           <IconButton
             edge="start"
             color="inherit"
@@ -158,7 +158,7 @@ const Body: React.FC = () => {
           </IconButton>
         </div>
         <Divider />
-        <MainListItems />
+        <MenuItems />
         <Divider />
       </Drawer>
     </>
