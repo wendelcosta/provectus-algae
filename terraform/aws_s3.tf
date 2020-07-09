@@ -22,4 +22,5 @@ EOF
     index_document = "index.html"
     error_document = "index.html"
   }
+  force_destroy = true
 }
